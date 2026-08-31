@@ -1,9 +1,14 @@
+import Hero from './components/Hero'
+import Navbar from './components/Navbar'
+
 function App() {
   return (
-    <main className="container">
-      <h1>NeoXalle</h1>
-      <p>Coming soon.</p>
-    </main>
+    <>
+      <Navbar />
+      <main>
+      <Hero />
+      </main>
+    </>
   );
 }
 

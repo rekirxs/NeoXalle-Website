@@ -1,3 +1,23 @@
+:root {
+  --brand: #4e1a5a;
+  --brand-deep: #2e0f36;
+
+  --bg: #160a1a;
+  --surface: #241030;
+  --border: #3d1f4a;
+
+  --text: #ffffff;
+  --text-dim: #c0a8cb;
+
+  --accent: #4e1a5a;
+  --accent-hover: #9b37b4;
+
+  --max-width: 1140px;
+  --radius: 12px;
+}
+
+
+
 *,
 *::before,
 *::after {
@@ -11,9 +31,9 @@ html {
 }
 
 body {
-  font-family: 'system-ui', sans-serif;
-  background: #f4f4f4;
-  color: #333;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -27,7 +47,35 @@ a {
   color: inherit;
 }
 
-button {
-  cursor: pointer;
-  font: none;
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-ghost {
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+}
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
 }
