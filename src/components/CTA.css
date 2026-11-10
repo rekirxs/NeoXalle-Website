@@ -1,0 +1,38 @@
+.cta {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(80% 120% at 50% 0%, rgba(180, 85, 204, 0.3) 0%, rgba(78, 26, 90, 0) 70%),
+    var(--brand);
+  padding: 96px 0;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 700px;
+}
+
+.cta-title {
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  margin-bottom: 18px;
+}
+
+.cta-text {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.08rem;
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+
+.cta-btn {
+  font-size: 16px;
+  padding: 17px 34px;
+}
+
+@media (max-width: 560px) {
+  .cta {
+    padding: 68px 0;
+  }
+}

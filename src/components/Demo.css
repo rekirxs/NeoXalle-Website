@@ -1,0 +1,141 @@
+.demo {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(70% 60% at 50% 0%, rgba(180, 85, 204, 0.12) 0%, rgba(19, 8, 24, 0) 70%),
+    var(--bg);
+}
+
+.demo-container {
+  position: relative;
+  z-index: 1;
+}
+
+.demo-board {
+  backdrop-filter: blur(2px);
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px 40px;
+}
+
+.demo-status {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+  min-height: 30px;
+}
+
+.demo-prompt {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.demo-prompt-idle,
+.demo-prompt-done {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.demo-prompt-waiting {
+  color: var(--text-mute);
+}
+
+.demo-prompt-live {
+  color: var(--accent);
+}
+
+.demo-round {
+  font-size: 13px;
+  color: var(--text-mute);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  justify-items: center;
+  margin-bottom: 32px;
+}
+
+.demo-pod {
+  padding: 8px;
+  border-radius: 50%;
+  transition: transform 0.1s;
+}
+
+.demo-pod:not(:disabled):hover {
+  transform: scale(1.04);
+}
+
+.demo-pod:active {
+  transform: scale(0.96);
+}
+
+.demo-pod:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.demo-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.demo-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.demo-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.demo-stat strong {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.demo-stat span {
+  font-size: 12px;
+  color: var(--text-mute);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 560px) {
+  .demo-board {
+    padding: 26px 18px 30px;
+  }
+
+  .demo-grid {
+    gap: 10px;
+  }
+
+  .demo-pod svg {
+    width: 118px;
+    height: 118px;
+  }
+
+  .demo-status {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}

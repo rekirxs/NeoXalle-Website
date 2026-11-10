@@ -1,0 +1,32 @@
+.spec-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 56px;
+}
+
+.spec-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.spec-row dt {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+.spec-row dd {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.98rem;
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .spec-list {
+    grid-template-columns: 1fr;
+  }
+}
